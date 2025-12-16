@@ -1,11 +1,10 @@
 function consecutiveSubstrings(string) {
-  const individual = [...string]
   const combined = []
-  const length = individual.length
+  const length = string.length
   
   for(let i = 0; i < length; i++) {
     for(let j = (i + 1); j <= length; j++) {
-      const substring = individual.slice(i,j).join('')
+      const substring = string.slice(i,j)
       combined.push(substring)
     }
 
