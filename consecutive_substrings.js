@@ -7,7 +7,6 @@ function consecutiveSubstrings(string) {
       const substring = string.slice(i,j)
       combined.push(substring)
     }
-
   }
 
   return combined

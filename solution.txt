@@ -1,2 +1,21 @@
 Please add your pseudocode to this file
+
+initialize combined array
+store text length in length variable
+    start for loop to iterate through each starting position
+        start for loop to iterate through each ending position of the substrings
+            use slice to extract sections of the string and store in substring variable
+            push substring to combined array
+return combined array
+
 And a written explanation of your solution
+
+This is a nested loop function because the use of slice requires a starting and end point.
+Slice is the most efficient way to pull substrings from the text without having to transform the input.
+The first loop tracks the starting position of where slice will pull the data. (i = 0)
+The second loop tells slice where the end point is.(j = 1)
+If the string input was "john", then the first substring slice would pull using the i and j variables would be "j".
+This method uses brute force to check all possible combinations without taking shortcuts since ALL substrings must be found.
+The time complexity is O(n^2) because each additional letter in the string creates a new starting point, and
+adds a new end point to each previous start point.
+This creates quadratic growth in time as the length of the string increases.
